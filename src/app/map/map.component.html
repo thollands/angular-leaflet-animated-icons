@@ -1,7 +1,7 @@
 <div
     leaflet
     class="leaflet-map"
-    [leafletLayers]="[ baseLayer ]"
+    [leafletLayers]="[ baseLayer, pointLayer]"
     [leafletOptions]="mapOptions"
     (leafletMapReady)="onMapReady($event)"
 >

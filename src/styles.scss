@@ -6,3 +6,68 @@ body {
     width: 100%;
     margin: 0;
 }
+
+
+.leaflet-div-icon {
+    background: none !important;
+    border: none !important;
+}
+
+
+// custom div icon style
+.custom-div-icon {
+    // size icon
+    width: 40px;
+    height: 40px;
+
+    // set round border
+    border-radius: 50%;
+    border: 2px solid rgb(153, 13, 53);
+    overflow: hidden;
+
+    // center contents
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // fonts
+    font-size: 1rem;
+    font-weight: bold;
+
+    // set colours
+    background: rgb(252, 213, 129);
+    color: rgb(0,0,0);
+
+}
+
+// class for pulse animation
+.pulse {
+    animation: pulse-animation 3s infinite;
+
+    &:hover {
+        animation: pulse-animation-hover 0.8s infinite ease-out;
+        animation-delay: 0ms !important;
+    }
+}
+
+// keyframes for pulse animation
+@keyframes pulse-animation {
+    0%, 100% {
+        box-shadow: 0 0 0 0px rgba(rgb(153, 13, 53), 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px rgba(rgb(153, 13, 53), 0.2);
+    }
+}
+
+// keyframes for pulse hover animation
+@keyframes pulse-animation-hover {
+    0% {
+        box-shadow: 0 0 0 5px rgba(rgb(153, 13, 53), 1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(rgb(153, 13, 53), 0);
+    }
+}
